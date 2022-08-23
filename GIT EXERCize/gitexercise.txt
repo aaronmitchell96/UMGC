@@ -1,0 +1,96 @@
+aaron@DESKTOP-O6BA59C:~$ mkdir learn_git_again
+aaron@DESKTOP-O6BA59C:~$ cd learn_git_again/
+aaron@DESKTOP-O6BA59C:~/learn_git_again$ touch third.txt
+aaron@DESKTOP-O6BA59C:~/learn_git_again$ git init
+hint: Using 'master' as the name for the initial branch. This default branch name
+hint: is subject to change. To configure the initial branch name to use in all
+hint: of your new repositories, which will suppress this warning, call:
+hint:
+hint:   git config --global init.defaultBranch <name>
+hint:
+hint: Names commonly chosen instead of 'master' are 'main', 'trunk' and
+hint: 'development'. The just-created branch can be renamed via this command:
+hint:
+hint:   git branch -m <name>
+Initialized empty Git repository in /home/aaron/learn_git_again/.git/
+aaron@DESKTOP-O6BA59C:~/learn_git_again$ git add third.txt
+aaron@DESKTOP-O6BA59C:~/learn_git_again$ git commit -m "adding third.txt"
+[master (root-commit) 6e874b9] adding third.txt
+ Committer: Aaron <aaron@DESKTOP-O6BA59C.localdomain>
+Your name and email address were configured automatically based
+on your username and hostname. Please check that they are accurate.
+You can suppress this message by setting them explicitly:
+
+    git config --global user.name "Your Name"
+    git config --global user.email you@example.com
+
+After doing this, you may fix the identity used for this commit with:
+
+    git commit --amend --reset-author
+
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+ create mode 100644 third.txt
+aaron@DESKTOP-O6BA59C:~/learn_git_again$ git log
+commit 6e874b90a6d0d42a47f81ef81dec383ba3b6d53c (HEAD -> master)
+Author: Aaron <aaron@DESKTOP-O6BA59C.localdomain>
+Date:   Tue Aug 23 19:04:49 2022 -0400
+
+    adding third.txt
+aaron@DESKTOP-O6BA59C:~/learn_git_again$ touch fourth.txt
+aaron@DESKTOP-O6BA59C:~/learn_git_again$ git add fourth.txt
+aaron@DESKTOP-O6BA59C:~/learn_git_again$ git commit -m "adding fourth.txt"
+[master 4f12d12] adding fourth.txt
+ Committer: Aaron <aaron@DESKTOP-O6BA59C.localdomain>
+Your name and email address were configured automatically based
+on your username and hostname. Please check that they are accurate.
+You can suppress this message by setting them explicitly:
+
+    git config --global user.name "Your Name"
+    git config --global user.email you@example.com
+
+After doing this, you may fix the identity used for this commit with:
+
+    git commit --amend --reset-author
+
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+ create mode 100644 fourth.txt
+aaron@DESKTOP-O6BA59C:~/learn_git_again$ rm third.txt
+aaron@DESKTOP-O6BA59C:~/learn_git_again$ git add third.txt
+aaron@DESKTOP-O6BA59C:~/learn_git_again$ git commit -m "removing third.txt"
+[master 0322103] removing third.txt
+ Committer: Aaron <aaron@DESKTOP-O6BA59C.localdomain>
+Your name and email address were configured automatically based
+on your username and hostname. Please check that they are accurate.
+You can suppress this message by setting them explicitly:
+
+    git config --global user.name "Your Name"
+    git config --global user.email you@example.com
+
+After doing this, you may fix the identity used for this commit with:
+
+    git commit --amend --reset-author
+
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+ delete mode 100644 third.txt
+aaron@DESKTOP-O6BA59C:~/learn_git_again$ git log
+commit 03221037f0f039fc7ce741628dedbad607ee3342 (HEAD -> master)
+Author: Aaron <aaron@DESKTOP-O6BA59C.localdomain>
+Date:   Tue Aug 23 19:06:18 2022 -0400
+
+    removing third.txt
+
+commit 4f12d1257ba091de2c2a358881058422ea506e10
+Author: Aaron <aaron@DESKTOP-O6BA59C.localdomain>
+Date:   Tue Aug 23 19:05:34 2022 -0400
+
+    adding fourth.txt
+
+commit 6e874b90a6d0d42a47f81ef81dec383ba3b6d53c
+Author: Aaron <aaron@DESKTOP-O6BA59C.localdomain>
+Date:   Tue Aug 23 19:04:49 2022 -0400
+
+    adding third.txt
+aaron@DESKTOP-O6BA59C:~/learn_git_again$ git config --global core.pager "cat"
+aaron@DESKTOP-O6BA59C:~/learn_git_again$ git config --global --list
+core.pager=cat
+aaron@DESKTOP-O6BA59C:~/learn_git_again$
