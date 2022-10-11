@@ -1,0 +1,27 @@
+/* some colors you may find useful:
+  #115ff4
+  #060ce9
+  #28a200
+  #8d2ab5
+  #74119c
+*/
+
+table,th,tr,td{
+  font-family: 'Copse';
+  border: 1px solid black;
+  color: white;
+}
+
+tr{
+  width: 75px;
+  height: 75px;
+}
+
+table {
+  margin-left: auto;
+  margin-right: auto;
+  font-size: 13px;
+  width: 100%;
+  table-layout:fixed;
+  background-color:  #115ff4;
+}
