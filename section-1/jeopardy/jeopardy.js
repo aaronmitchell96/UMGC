@@ -69,8 +69,9 @@ async function makeGameBody(){
             console.log(res[i]);
         })
     }
-
 }
+
+makeGameBody();
 
 
 
