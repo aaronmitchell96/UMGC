@@ -64,13 +64,19 @@ async function makeGameBody(){
             let clueAmount = res[i].data.clues.length;
             let randClue = Math.floor(Math.random() * clueAmount);
             this.innerText = res[i].data.clues[randClue].question;
-            //remove clue from array so we dont duplicate clues 
-            res[i].data.clues.splice(randClue,1)
-            console.log(res[i]);
+            //remove clue from array so we dont duplicate clues    
+            $(this).on('click',function(){
+                this.innerText = res[i].data.clues[randClue].answer;
+                res[i].data.clues.splice(randClue,1)
+                $(this).off();
+            })
         })
     }
-
 }
 
+makeGameBody()
+$('button').on('click',function(){
+    location.reload();
+})
 
 
