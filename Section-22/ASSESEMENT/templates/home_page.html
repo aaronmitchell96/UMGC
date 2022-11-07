@@ -1,0 +1,16 @@
+{% extends 'base.html' %}
+
+{% block title %}Home Page{% endblock %}
+
+{% block content %}
+    <form action="/result">
+        <label>Converting From:</label>
+        <input type="text" name="from"><br><br>
+        <label>Converting To:</label>
+        <input type="text" name="to"><br><br>
+        <label>Amount</label>
+        <input type="text" name="amount"><br><br>
+        <button>Convert</button>
+    </form>
+
+{% endblock %}

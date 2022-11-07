@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Choose Words!</title>
+</head>
+<body>
+    <h1>MADLIBS</h1>
+    <form action="/story-result">
+        <ul style="list-style-type: none; margin: 0; padding: 0;">
+        {% for word in words %}
+            <li><label>{{word}}:  <input type="text" placeholder="{{word}}" name="{{word}}"></label></li>
+                <br>
+        {% endfor %}
+        </ul>
+        <button>Submit</button>
+    </form>
+</body>
+</html>
