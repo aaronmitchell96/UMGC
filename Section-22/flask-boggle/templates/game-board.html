@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Game Board</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+</head>
+<body>
+    <h1>Welcome to Boggle!</h1>
+    <h2>Here is the game board:</h2>
+    {% for row in game_board %}
+    <p>{{row}}</p>
+    {% endfor %}
+    <form>
+        <label>Your Guess: </label>
+        <input type="text" name="guess" placeholder="your guess?">
+        <button type="submit">Submit Guess</button>
+    </form>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script type="text/javascript" src="{{ url_for('static',filename='script.js') }}"></script>
+</body>
+</html>
