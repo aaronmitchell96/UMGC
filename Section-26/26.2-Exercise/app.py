@@ -13,7 +13,7 @@ app.config['DEBUG_TB_INTERCEPT_REDIRECTS'] = False
 # debug = DebugToolbarExtension(app)
 
 connect_db(app)
-db.create_all
+db.create_all()
 
 @app.route('/')
 def home():
@@ -57,8 +57,8 @@ def post_post(user_id):
     content = request.form['content']
     created_at = datetime.now()
     
-    new_post = Post(title=title,content=content,created_at=created_at)
+    new_post = Post(title=title,content=content,created_at=created_at,user=user)
     db.session.add(new_post)
     db.session.commit()
 
-    return redirect('/users/{user_id}')
+    return redirect('/users')
