@@ -9,10 +9,10 @@
 </head>
 <body>
     <h1>Add Post for {{user.first_name + ' ' + user.last_name}}</h1>
-    <form action="/users/{{user.id}}/posts/new">
-        <label>Title </label><input type="text" class="title-data" name="post-title"><br><br>
-        <label>Content  </label><input type="text" class="content-data" name="post-content"><br><br>
-        <button>Add</button>
+    <form method="POST">
+        <label>Title </label><input type="text" class="title-data" name="title"><br><br>
+        <label>Content  </label><input type="text" class="content-data" name="content"><br><br>
+        <button type="submit">Add</button>
     </form>
 </body>
 </html>

@@ -26,6 +26,8 @@ class User(db.Model):
 
     image_url = db.Column(db.String(),
                           unique=True)
+
+    posts = db.relationship("Post", backref="user")
     
 class Post(db.Model):
     __tablename__ = 'posts'
