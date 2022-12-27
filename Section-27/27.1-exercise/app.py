@@ -1,5 +1,5 @@
 from flask import Flask, render_template, redirect, request, flash
-from flask_debugtoolbar import DebugToolbarExtension
+# from flask_debugtoolbar import DebugToolbarExtension
 from models import db, connect_db, Pet
 from forms import AddPet
 
@@ -12,9 +12,7 @@ app.config['SECRET_KEY'] = "abc123"
 app.config['DEBUG_TB_INTERCEPT_REDIRECTS'] = False
 
 connect_db(app)
-toolbar = DebugToolbarExtension(app)
-
-db.create_all()
+# toolbar = DebugToolbarExtension(app)
 
 @app.route('/')
 def home_page():
@@ -56,5 +54,8 @@ def edit_pet(id):
 
     else:
         return render_template("edit_pet.html", form=form)
+
+# if __name__ == '__main__':
+#     app.run()
 
 
