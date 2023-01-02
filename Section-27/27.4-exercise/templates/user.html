@@ -1,0 +1,11 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<h1 class="display-1">YOU MADE IT!</h1>
+<ul>
+    <li>{{user.username}}</li>
+    <li>{{user.email}}</li>
+    <li>{{user.first_name}}</li>
+    <li>{{user.last_name}}</li>
+</ul>
+{% endblock %}
