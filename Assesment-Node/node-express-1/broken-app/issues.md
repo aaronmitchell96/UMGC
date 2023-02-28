@@ -3,6 +3,7 @@ Within the app.js file I found one major issue that was preventing the whole app
 The line: 
     let results = req.body.developers.map(async d => {
         return await axios.get(`https://api.github.com/users/${d}`);
+        
     }
 
 ... is just going to return a promise. I realized when I was testing this code that you cant use an async/await call on a map function. 
