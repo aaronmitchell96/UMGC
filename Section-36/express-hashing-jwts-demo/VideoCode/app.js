@@ -12,10 +12,10 @@ app.use("/", routes);
 
 /** 404 catch --- passes to next handler. */
 
-app.use(function (req, res, next) {
-  const err = new ExpressError("Not found!", 404);
-  return next(err);
-});
+// app.use(function (req, res, next) {
+//   const err = new ExpressError("Not found!", 404);
+//   return next(err);
+// });
 
 /** general error handler */
 
