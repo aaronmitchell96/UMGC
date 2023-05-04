@@ -1,0 +1,12 @@
+#root b {
+    color: aqua;
+}
+
+#root span {
+    text-align: center;
+    border: .5mm solid black;
+    display: inline-block;
+    height: 350px;
+    width: 330px;
+    margin: 10px 10px 10px 10px;
+    }
