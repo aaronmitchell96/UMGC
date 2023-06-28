@@ -1,10 +1,14 @@
 import React from "react";
-import BoxList from "./BoxList";
+// import BoxList from "./BoxList";
+// import Timer from "./Timer";
+import ProfileViewer from "./ProfileViewer";
 
 function App() {
   return (
     <div>
-      <BoxList />
+      {/* <Timer /> */}
+      <ProfileViewer />
+      {/* <BoxList /> */}
     </div>
   );
 }
