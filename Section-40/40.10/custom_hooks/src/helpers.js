@@ -31,4 +31,4 @@ function formatPokemon(data) {
   };
 }
 
-export { choice, formatCard, formatPokemon };
+export { choice, formatCard, formatPokemon }
