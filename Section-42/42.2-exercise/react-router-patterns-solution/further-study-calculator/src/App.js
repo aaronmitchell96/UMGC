@@ -12,6 +12,7 @@ function App() {
           <Route exact path="/:operation/:num1/:num2">
             <Math/>
           </Route>
+          {/* facts */}
           <Route exact path="/">
             <Home/>
           </Route>
